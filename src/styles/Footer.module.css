@@ -3,5 +3,9 @@
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    margin-top: auto;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 0;
 }

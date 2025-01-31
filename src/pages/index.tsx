@@ -5,16 +5,18 @@ import styles from '../styles/Home.module.css';
 
 export default function Home() {
     return (
-        <div className={styles.container}>
+        <div>
             <Head>
                 <title>Hafla Storage & Movers</title>
                 <meta name="description" content="Student-focused storage and moving services" />
             </Head>
             <Header />
             <main className={styles.main}>
-                <h1>Welcome to Hafla Storage & Movers</h1>
-                <p>Your trusted partner for student storage and moving solutions.</p>
-                <img src="/boxes.jpeg" alt="Storage Boxes" className={styles.heroImage} />
+                <div className={styles.hero}>
+                    <h1>Welcome to Hafla Storage & Movers</h1>
+                    <p>Your trusted partner for student storage and moving solutions.</p>
+                    <img src="/boxes.jpeg" alt="Storage Boxes" className={styles.heroImage} />
+                </div>
             </main>
             <Footer />
         </div>

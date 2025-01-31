@@ -94,3 +94,57 @@
         font-size: 1rem;
     }
 }
+
+.whyChooseUs {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.whyChooseUs h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #0070f3;
+}
+
+.reasonsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.reasonCard {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.reasonCard h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #0070f3;
+}
+
+.reasonCard p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .whyChooseUs h2 {
+        font-size: 1.8rem;
+    }
+
+    .reasonCard h3 {
+        font-size: 1.3rem;
+    }
+
+    .reasonCard p {
+        font-size: 0.9rem;
+    }
+}

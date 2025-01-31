@@ -5,7 +5,7 @@ export default function Header() {
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
-                <img src="/logo.PNG" alt="Hafla Storage & Movers Logo" />
+                <img src="/logo.jpeg" alt="Hafla Storage & Movers Logo" />
             </div>
             <nav className={styles.nav}>
                 <Link href="/">Home</Link>

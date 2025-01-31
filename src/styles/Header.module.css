@@ -1,13 +1,25 @@
 .header {
     background-color: #0070f3;
-    padding: 20px 0;
+    padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Adjust this value to fit your logo */
+    width: auto; /* Maintain aspect ratio */
 }
 
 .nav {
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .nav a {

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
 import styles from '../styles/QuoteModal.module.css';
 
 Modal.setAppElement('#__next'); // Required for accessibility
@@ -22,23 +23,44 @@ export default function QuoteModal({ isOpen, onRequestClose, selectedService }: 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
+        // Prepare the email data
         const emailData = {
             ...formData,
             service: selectedService, // Include the selected service in the email
         };
 
         try {
+            // Send the email using EmailJS
             await emailjs.send(
-                'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-                'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+                'service_dtwmapbo', // Replace with your EmailJS service ID
+                'template_xxxxxxxxxxxxxxxx', // Replace with your EmailJS template ID
                 emailData,
-                'YOUR_USER_ID' // Replace with your EmailJS user ID
+                'obWsOrvkulvNl08WO' // Replace with your Public Key (User ID)
             );
-            alert('Quote request sent successfully!');
-            onRequestClose();
+
+            // Show success toast
+            toast.success('Quote request sent successfully!', {
+                position: 'top-center',
+                autoClose: 3000, // Close after 3 seconds
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+            });
+
+            onRequestClose(); // Close the modal
         } catch (error) {
             console.error('Failed to send quote request:', error);
-            alert('Failed to send quote request. Please try again.');
+
+            // Show error toast
+            toast.error('Failed to send quote request. Please try again.', {
+                position: 'top-center',
+                autoClose: 3000, // Close after 3 seconds
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+            });
         }
     };
 

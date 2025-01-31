@@ -1,11 +1,32 @@
 .footer {
-    background-color: #333;
+    background-color: var(--primary-color);
     color: #fff;
+    padding: 40px 20px;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
 }
 
-.footer p {
-    margin: 0;
+.footerContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.footerSection h3 {
+    margin-bottom: 15px;
+}
+
+.footerSection a {
+    color: #fff;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footerSection a:hover {
+    text-decoration: underline;
+}
+
+.footerBottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
 }

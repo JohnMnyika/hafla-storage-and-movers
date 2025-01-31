@@ -1,3 +1,11 @@
+:root {
+    --primary-color: #0070f3;
+    --secondary-color: #ffdd57;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --text-light: #555;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,12 +16,12 @@ html,
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 a {
-    color: #0070f3;
+    color: var(--primary-color);
     text-decoration: none;
 }
 
@@ -28,36 +36,29 @@ a:hover {
 }
 
 .main {
-    padding: 40px 0;
+    padding: 60px 0;
 }
 
 h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
 }
 
 p {
     font-size: 1.1rem;
     margin-bottom: 20px;
+    color: var(--text-light);
 }
 
 img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-}
-
-@media (max-width: 768px) {
-    .nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
 }

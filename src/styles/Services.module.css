@@ -1,15 +1,33 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
 }
 
-.main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.serviceCard {
+    background-color: #fff;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+}
+
+.serviceIcon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.serviceButton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.serviceButton:hover {
+    background-color: #005bb5;
 }

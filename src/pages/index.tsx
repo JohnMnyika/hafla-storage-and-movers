@@ -11,13 +11,13 @@ export default function Home() {
                 <meta name="description" content="Student-focused storage and moving services" />
             </Head>
             <Header />
-            <main className={styles.main}>
-                <div className={styles.hero}>
-                    <h1>Welcome to Hafla Storage & Movers</h1>
-                    <p>Your trusted partner for student storage and moving solutions.</p>
-                    <img src="/boxes.jpeg" alt="Storage Boxes" className={styles.heroImage} />
+            <div className={styles.hero}>
+                <div className={styles.heroContent}>
+                    <h1>Your Trusted Partner for Student Storage & Moving</h1>
+                    <p>Affordable, secure, and hassle-free solutions tailored for students.</p>
+                    <a href="/contact" className={styles.ctaButton}>Request a Quote</a>
                 </div>
-            </main>
+            </div>
             <Footer />
         </div>
     );

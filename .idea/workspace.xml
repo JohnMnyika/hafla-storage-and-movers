@@ -6,15 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b29af188-46c4-409f-9ef9-20d8898840fe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/about.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/services.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/services.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/About.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/About.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Footer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Footer.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Home.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Services.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Services.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +105,7 @@
       <option name="presentableId" value="Default" />
       <updated>1738316799962</updated>
       <workItem from="1738316801088" duration="3737000" />
-      <workItem from="1738320786818" duration="8519000" />
+      <workItem from="1738320786818" duration="9282000" />
     </task>
     <servers />
   </component>

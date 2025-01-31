@@ -1,11 +1,12 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from '../styles/Header.module.css';
 
 export default function Header() {
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
-                <img src="/logo.jpeg" alt="Hafla Storage & Movers Logo" />
+                <Image src="/logo.jpeg" alt="Hafla Storage & Movers Logo" width={150} height={50} />
             </div>
             <nav className={styles.nav}>
                 <Link href="/">Home</Link>

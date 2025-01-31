@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
                 <div className={styles.heroContent}>
                     <h1>Your Trusted Partner for Student Storage & Moving</h1>
                     <p>Affordable, secure, and hassle-free solutions tailored for students.</p>
-                    <a href="/contact" className={styles.ctaButton}>Request a Quote</a>
+                    <Link href="/contact" className={styles.ctaButton}>Request a Quote</Link>
                 </div>
             </div>
             <Footer />

@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Image from 'next/image';
 import styles from '../styles/About.module.css';
 
 export default function About() {
@@ -22,7 +23,7 @@ export default function About() {
                         </p>
                     </div>
                     <div className={styles.aboutImage}>
-                        <img src="/items.jpeg" alt="About Us" />
+                        <Image src="/items.jpeg" alt="About Us" width={500} height={300} />
                     </div>
                 </div>
             </main>

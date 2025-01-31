@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Link from 'next/link';
 import styles from '../styles/Services.module.css';
 
 export default function Services() {
@@ -36,7 +37,7 @@ export default function Services() {
                             <div className={styles.serviceIcon}>{service.icon}</div>
                             <h2>{service.title}</h2>
                             <p>{service.description}</p>
-                            <a href="/contact" className={styles.serviceButton}>Learn More</a>
+                            <Link href="/contact" className={styles.serviceButton}>Learn More</Link>
                         </div>
                     ))}
                 </div>

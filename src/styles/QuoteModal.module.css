@@ -3,7 +3,7 @@
     padding: 20px;
     border-radius: 10px;
     max-width: 500px;
-    width: 100%;
+    width: 90%; /* Responsive width */
     margin: 0 auto;
     position: relative;
     top: 50%;
@@ -53,4 +53,21 @@
 
 .form button:hover {
     background-color: #005bb5;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .modal {
+        width: 100%; /* Full width on smaller screens */
+        padding: 15px;
+    }
+
+    .form input,
+    .form textarea {
+        font-size: 14px;
+    }
+
+    .form button {
+        font-size: 14px;
+    }
 }

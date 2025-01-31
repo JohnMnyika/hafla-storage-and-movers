@@ -1,15 +1,62 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+.main {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.main {
-    flex: 1;
+.main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #0070f3;
+    text-align: center;
+}
+
+.faqList {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    gap: 20px;
+    align-items: center; /* Center items on smaller devices */
+}
+
+.faqItem {
+    background-color: #fff;
     padding: 20px;
-    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Full width on smaller devices */
+    max-width: 800px; /* Limit width for larger screens */
+}
+
+.faqItem h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #0070f3;
+}
+
+.faqItem p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .main h1 {
+        font-size: 2rem;
+    }
+
+    .faqItem h3 {
+        font-size: 1.3rem;
+    }
+
+    .faqItem p {
+        font-size: 0.9rem;
+    }
+
+    .faqList {
+        align-items: center; /* Ensure items are centered on smaller devices */
+    }
+
+    .faqItem {
+        width: 90%; /* Slightly smaller width for better readability */
+    }
 }

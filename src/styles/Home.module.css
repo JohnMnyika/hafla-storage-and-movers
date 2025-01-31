@@ -1,5 +1,5 @@
 .hero {
-    background-image: url('/boxes.jpeg');
+    background-image: url('/boxes.jpeg'); /* Use your hero image */
     background-size: cover;
     background-position: center;
     height: 80vh;
@@ -16,7 +16,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
 }
 
 .heroContent {
@@ -29,24 +29,68 @@
 .heroContent h1 {
     font-size: 3rem;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .heroContent p {
     font-size: 1.2rem;
     margin-bottom: 40px;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.ctaSection {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.ctaSection h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #0070f3;
+}
+
+.ctaSection p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #555;
 }
 
 .ctaButton {
     display: inline-block;
     padding: 12px 24px;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+    background-color: #0070f3;
+    color: #fff;
     font-size: 1.1rem;
     font-weight: 600;
     border-radius: 5px;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 .ctaButton:hover {
-    background-color: #ffc107;
+    background-color: #005bb5;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+    }
+
+    .heroContent h1 {
+        font-size: 2rem;
+    }
+
+    .heroContent p {
+        font-size: 1rem;
+    }
+
+    .ctaSection h2 {
+        font-size: 1.5rem;
+    }
+
+    .ctaSection p {
+        font-size: 1rem;
+    }
 }

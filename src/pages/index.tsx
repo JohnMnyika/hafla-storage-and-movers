@@ -16,7 +16,7 @@ export default function Home() {
                 <div className={styles.heroContent}>
                     <h1>Your Trusted Partner for Student Storage & Moving</h1>
                     <p>Affordable, secure, and hassle-free solutions tailored for students.</p>
-                    <Link href="/contact" className={styles.ctaButton}>Request a Quote</Link>
+                    <Link href="/services" className={styles.ctaButton}>View Our Services</Link>
                 </div>
             </div>
             <Footer />

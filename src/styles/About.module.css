@@ -22,3 +22,13 @@
         flex-direction: column;
     }
 }
+
+@media (max-width: 768px) {
+    .aboutContent {
+        flex-direction: column;
+    }
+
+    .aboutImage img {
+        width: 100%;
+    }
+}

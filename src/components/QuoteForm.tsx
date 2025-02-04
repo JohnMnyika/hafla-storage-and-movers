@@ -14,10 +14,10 @@ export default function QuoteForm() {
 
         try {
             await emailjs.sendForm(
-                'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-                'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+                'service_cqgccsz', // Replace with your EmailJS service ID
+                'template_4dwvd5x', // Replace with your EmailJS template ID
                 e.currentTarget,
-                'YOUR_USER_ID' // Replace with your EmailJS user ID
+                'sKOUFwgAGtSGTTw-A' // Replace with your EmailJS user ID
             );
             alert('Quote request sent successfully!');
             setFormData({ name: '', email: '', message: '' }); // Reset form

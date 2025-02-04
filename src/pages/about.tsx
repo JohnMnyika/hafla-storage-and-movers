@@ -13,9 +13,9 @@ export default function About() {
                 <meta name="keywords" content="about Hafla Storage, student storage, moving services, affordable storage" />
                 <meta property="og:title" content="About Us - Hafla Storage & Movers" />
                 <meta property="og:description" content="Learn more about Hafla Storage & Movers, a trusted provider of student-focused storage and moving services." />
-                <meta property="og:image" content="https://hafla-storage-and-movers.vercel.app/_next/image?url=%2Flogo.jpeg&w=64&q=75" />
-                <meta property="og:url" content="https://hafla-storage-and-movers.vercel.app/" />
-                <link rel="canonical" href="https://hafla-storage-and-movers.vercel.app/" />
+                <meta property="og:image" content="http://hafla-storage-and-movers.co.ke/_next/image?url=%2Flogo.jpeg&w=64&q=75" />
+                <meta property="og:url" content="http://hafla-storage-and-movers.co.ke/" />
+                <link rel="canonical" href="http://hafla-storage-and-movers.co.ke/" />
             </Head>
             <Header />
             <main className={styles.main}>

@@ -13,9 +13,9 @@ export default function Contact() {
                 <meta name="keywords" content="contact Hafla Storage, student storage, moving services, free quote" />
                 <meta property="og:title" content="Contact Us - Hafla Storage & Movers" />
                 <meta property="og:description" content="Contact Hafla Storage & Movers for affordable and secure student storage and moving services. Request a free quote today!" />
-                <meta property="og:image" content="https://hafla-storage-and-movers.vercel.app/_next/image?url=%2Flogo.jpeg&w=64&q=75" />
-                <meta property="og:url" content="https://hafla-storage-and-movers.vercel.app/" />
-                <link rel="canonical" href="https://hafla-storage-and-movers.vercel.app/contact" />
+                <meta property="og:image" content="http://hafla-storage-and-movers.co.ke/_next/image?url=%2Flogo.jpeg&w=64&q=75" />
+                <meta property="og:url" content="http://hafla-storage-and-movers.co.ke/" />
+                <link rel="canonical" href="http://hafla-storage-and-movers.co.ke/contact" />
             </Head>
             <Header />
             <main className={styles.main}>

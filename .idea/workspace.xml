@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b29af188-46c4-409f-9ef9-20d8898840fe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuoteModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuoteModal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/about.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/faq.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/faq.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/services.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/services.tsx" afterDir="false" />
     </list>
@@ -108,7 +108,9 @@
       <workItem from="1738316801088" duration="3737000" />
       <workItem from="1738320786818" duration="19806000" />
       <workItem from="1738583084879" duration="631000" />
-      <workItem from="1738653000592" duration="2727000" />
+      <workItem from="1738653000592" duration="3323000" />
+      <workItem from="1738665278011" duration="638000" />
+      <workItem from="1738690467790" duration="727000" />
     </task>
     <servers />
   </component>

@@ -32,10 +32,10 @@ export default function QuoteModal({ isOpen, onRequestClose, selectedService }: 
         try {
             // Send the email using EmailJS
             await emailjs.send(
-                'service_dtwmapbo', // Replace with your EmailJS service ID
-                'template_xxxxxxxxxxxxxxxx', // Replace with your EmailJS template ID
+                'service_dtwmqbo', // Replace with your EmailJS service ID
+                'template_pw8fe8a', // Replace with your EmailJS template ID
                 emailData,
-                'obWsOrvkulvNl08WO' // Replace with your Public Key (User ID)
+                'obWSOrvkulvNI08W0' // Replace with your Public Key (User ID)
             );
 
             // Show success toast

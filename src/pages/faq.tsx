@@ -34,7 +34,14 @@ export default function FAQ() {
     return (
         <div>
             <Head>
-                <title>FAQ - Hafla Storage & Movers</title>
+                <title>FAQ - Hafla Storage & Movers | Frequently Asked Questions</title>
+                <meta name="description" content="Find answers to frequently asked questions about Hafla Storage & Movers. Learn about our student storage and moving services." />
+                <meta name="keywords" content="FAQ Hafla Storage, student storage, moving services, frequently asked questions" />
+                <meta property="og:title" content="FAQ - Hafla Storage & Movers" />
+                <meta property="og:description" content="Find answers to frequently asked questions about Hafla Storage & Movers. Learn about our student storage and moving services." />
+                <meta property="og:image" content="https://hafla-storage-and-movers.vercel.app/_next/image?url=%2Flogo.jpeg&w=64&q=75" />
+                <meta property="og:url" content="https://hafla-storage-and-movers.vercel.app/faq" />
+                <link rel="canonical" href="https://hafla-storage-and-movers.vercel.app/faq" />
             </Head>
             <Header />
             <main className={styles.main}>

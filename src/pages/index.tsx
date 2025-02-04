@@ -8,8 +8,30 @@ export default function Home() {
     return (
         <div>
             <Head>
-                <title>Hafla Storage & Movers</title>
-                <meta name="description" content="Student-focused storage and moving services" />
+                <title>Hafla Storage & Movers - Student Storage & Moving Services</title>
+                <meta name="description" content="Affordable, secure, and hassle-free student storage and moving services. Trusted by students for reliable solutions tailored to their needs." />
+                <meta name="keywords" content="student storage, moving services, affordable storage, secure storage, student movers" />
+                <meta name="author" content="Hafla Storage & Movers" />
+                <meta property="og:title" content="Hafla Storage & Movers - Student Storage & Moving Services" />
+                <meta property="og:description" content="Affordable, secure, and hassle-free student storage and moving services. Trusted by students for reliable solutions tailored to their needs." />
+                <meta property="og:image" content="https://hafla-storage-and-movers.vercel.app/_next/image?url=%2Flogo.jpeg&w=64&q=75" />
+                <meta property="og:url" content="https://hafla-storage-and-movers.vercel.app/" />
+                <link rel="canonical" href="https://hafla-storage-and-movers.vercel.app/" />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Company",
+                        "name": "Hafla Storage & Movers",
+                        "url": "https://hafla-storage-and-movers.vercel.app/",
+                        "logo": "https://hafla-storage-and-movers.vercel.app/_next/image?url=%2Flogo.jpeg&w=64&q=75",
+                        "description": "Affordable, secure, and hassle-free student storage and moving services.",
+                        "contactPoint": {
+                            "@type": "ContactPoint",
+                            "telephone": "+123-456-7890",
+                            "contactType": "customer service"
+                        }
+                    })}
+                </script>
             </Head>
             <Header />
             <div className={styles.hero}>

@@ -40,7 +40,14 @@ export default function Services() {
     return (
         <div>
             <Head>
-                <title>Services - Hafla Storage & Movers</title>
+                <title>Services - Hafla Storage & Movers | Student Storage & Moving Solutions</title>
+                <meta name="description" content="Explore our student-focused storage and moving services, including local and long-distance moving, secure storage, and customizable packages." />
+                <meta name="keywords" content="student storage, moving services, local moving, long-distance moving, secure storage" />
+                <meta property="og:title" content="Services - Hafla Storage & Movers" />
+                <meta property="og:description" content="Explore our student-focused storage and moving services, including local and long-distance moving, secure storage, and customizable packages." />
+                <meta property="og:image" content="https://hafla-storage-and-movers.vercel.app/_next/image?url=%2Flogo.jpeg&w=64&q=75" />
+                <meta property="og:url" content="https://hafla-storage-and-movers.vercel.app/services" />
+                <link rel="canonical" href="https://hafla-storage-and-movers.vercel.app/services" />
             </Head>
             <Header />
             <main className={styles.main}>

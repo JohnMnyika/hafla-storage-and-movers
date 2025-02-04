@@ -8,7 +8,14 @@ export default function About() {
     return (
         <div>
             <Head>
-                <title>About Us - Hafla Storage & Movers</title>
+                <title>About Us - Hafla Storage & Movers | Student Storage & Moving Services</title>
+                <meta name="description" content="Learn more about Hafla Storage & Movers, a trusted provider of student-focused storage and moving services. Affordable, secure, and reliable solutions." />
+                <meta name="keywords" content="about Hafla Storage, student storage, moving services, affordable storage" />
+                <meta property="og:title" content="About Us - Hafla Storage & Movers" />
+                <meta property="og:description" content="Learn more about Hafla Storage & Movers, a trusted provider of student-focused storage and moving services." />
+                <meta property="og:image" content="https://hafla-storage-and-movers.vercel.app/_next/image?url=%2Flogo.jpeg&w=64&q=75" />
+                <meta property="og:url" content="https://hafla-storage-and-movers.vercel.app/" />
+                <link rel="canonical" href="https://hafla-storage-and-movers.vercel.app/" />
             </Head>
             <Header />
             <main className={styles.main}>
@@ -23,7 +30,7 @@ export default function About() {
                         </p>
                     </div>
                     <div className={styles.aboutImage}>
-                        <Image src="/items.jpeg" alt="About Us" width={500} height={300} />
+                        <Image src="/items.jpeg" alt="About Hafla Storage & Movers" width={500} height={300} />
                     </div>
                 </div>
             </main>

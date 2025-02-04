@@ -19,8 +19,31 @@ export default function Contact() {
             </Head>
             <Header />
             <main className={styles.main}>
-                <h1>Contact Us</h1>
-                <QuoteForm />
+                <div className={styles.heroSection}>
+                    <h1 className={styles.title}>Contact Us</h1>
+                    <p className={styles.subtitle}>Get in touch with Hafla Storage & Movers for affordable and secure storage solutions. Request a free quote today!</p>
+                </div>
+                <div className={styles.formContainer}>
+                    <QuoteForm />
+                </div>
+                {/* Testimonials Section */}
+                <div className={styles.testimonials}>
+                    <h2 className={styles.testimonialsTitle}>What Our Customers Say</h2>
+                    <div className={styles.testimonialsGrid}>
+                        <div className={styles.testimonialCard}>
+                            <p className={styles.testimonialText}>&quot;Hafla Storage made my move stress-free! Their team was professional and efficient.&quot;</p>
+                            <p className={styles.testimonialAuthor}>- Jane Muthoni</p>
+                        </div>
+                        <div className={styles.testimonialCard}>
+                            <p className={styles.testimonialText}>&quot;Affordable and reliable storage solutions. Highly recommend Hafla Storage!&quot;</p>
+                            <p className={styles.testimonialAuthor}>- John Kimani</p>
+                        </div>
+                        <div className={styles.testimonialCard}>
+                            <p className={styles.testimonialText}>&quot;Great service and friendly staff. My belongings were safe and secure.&quot;</p>
+                            <p className={styles.testimonialAuthor}>- Mary Johnson</p>
+                        </div>
+                    </div>
+                </div>
             </main>
             <Footer />
         </div>

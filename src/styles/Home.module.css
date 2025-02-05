@@ -7,6 +7,16 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .hero::before {
@@ -24,6 +34,18 @@
     color: #fff; /* This sets the default text color to white */
     position: relative;
     z-index: 1;
+    animation: slideUp 1.5s ease-in-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .heroContent h1 {
@@ -67,11 +89,12 @@
     font-weight: 600;
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .ctaButton:hover {
     background-color: #005bb5;
+    transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
@@ -106,6 +129,7 @@
     font-size: 2rem;
     margin-bottom: 40px;
     color: #0070f3;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .reasonsGrid {
@@ -122,6 +146,13 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.reasonCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .reasonCard h3 {

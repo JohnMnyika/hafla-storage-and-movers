@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { motion } from 'framer-motion';
 import styles from '../styles/FAQ.module.css';
 
 export default function FAQ() {
@@ -44,17 +45,39 @@ export default function FAQ() {
                 <link rel="canonical" href="https://hafla-storage-and-movers.vercel.app/faq" />
             </Head>
             <Header />
-            <main className={styles.main}>
-                <h1>Frequently Asked Questions</h1>
-                <div className={styles.faqList}>
+            <motion.main
+                className={styles.main}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8 }}
+            >
+                <motion.h1
+                    initial={{ y: -20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.6 }}
+                >
+                    Frequently Asked Questions
+                </motion.h1>
+                <motion.div
+                    className={styles.faqList}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.3, duration: 0.8 }}
+                >
                     {faqs.map((faq, index) => (
-                        <div key={index} className={styles.faqItem}>
+                        <motion.div
+                            key={index}
+                            className={styles.faqItem}
+                            initial={{ y: 20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ delay: index * 0.2, duration: 0.6 }}
+                        >
                             <h3>{faq.question}</h3>
                             <p>{faq.answer}</p>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
-            </main>
+                </motion.div>
+            </motion.main>
             <Footer />
         </div>
     );

@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import styles from '../styles/About.module.css';
 
 export default function About() {
@@ -18,22 +19,51 @@ export default function About() {
                 <link rel="canonical" href="http://hafla-storage-and-movers.co.ke/" />
             </Head>
             <Header />
-            <main className={styles.main}>
-                <div className={styles.aboutContent}>
-                    <div className={styles.aboutText}>
-                        <h1>About Hafla Storage & Movers</h1>
-                        <p>
+            <motion.main
+                className={styles.main}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8 }}
+            >
+                <motion.div
+                    className={styles.aboutContent}
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                >
+                    <motion.div className={styles.aboutText}>
+                        <motion.h1
+                            initial={{ y: -20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ duration: 0.6 }}
+                        >
+                            About Hafla Storage & Movers
+                        </motion.h1>
+                        <motion.p
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 0.3, duration: 0.8 }}
+                        >
                             At Hafla Storage & Movers, we specialize in tailored storage and moving services for students. We understand the unique challenges students face when moving between dorms, apartments, or taking extended breaks, and we provide affordable, flexible solutions to meet their needs.
-                        </p>
-                        <p>
+                        </motion.p>
+                        <motion.p
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 0.5, duration: 0.8 }}
+                        >
                             We are a renowned moving and storage company recognized for excellence in the industry. Our commitment to quality service has earned us prestigious awards such as the KESA Awards. We take great pride in providing safe, reliable, and professional moving and storage services that give our customers peace of mind.
-                        </p>
-                    </div>
-                    <div className={styles.aboutImage}>
-                        <Image src="/items.jpeg" alt="About Hafla Storage & Movers" width={500} height={300} />
-                    </div>
-                </div>
-            </main>
+                        </motion.p>
+                    </motion.div>
+                    <motion.div
+                        className={styles.aboutImage}
+                        initial={{ scale: 0.8, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        transition={{ delay: 0.5, duration: 0.8 }}
+                    >
+                        <Image src="/items.jpeg" alt="About Hafla Storage & Movers" width={500} height={300} className={styles.image} />
+                    </motion.div>
+                </motion.div>
+            </motion.main>
             <Footer />
         </div>
     );

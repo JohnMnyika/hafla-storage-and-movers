@@ -21,7 +21,7 @@
 
 .heroContent {
     text-align: center;
-    color: #fff;
+    color: #fff; /* This sets the default text color to white */
     position: relative;
     z-index: 1;
 }
@@ -37,6 +37,7 @@
     margin-bottom: 40px;
     max-width: 600px;
     line-height: 1.6;
+    color: #fff; /* Ensure the paragraph text is white */
 }
 
 .ctaSection {

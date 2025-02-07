@@ -32,9 +32,8 @@ export default function Footer() {
                 <div className={styles.footerSection}>
                     <h3>Follow Us</h3>
                     <ul>
-                        <li><a href="#" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-                        <li><a href="#" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-                        <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61572705272539" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/hafla_movers?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener noreferrer">Instagram</a></li>
                     </ul>
                 </div>
             </div>

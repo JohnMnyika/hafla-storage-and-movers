@@ -38,9 +38,10 @@ export default function Services() {
     ];
 
     return (
-        <div>
+        <div className={styles.container}>
             <Head>
                 <title>Services - Hafla Storage & Movers</title>
+                <meta name="description" content="Explore our modern and reliable storage and moving services tailored for students." />
             </Head>
             <Header />
             <main className={styles.main}>

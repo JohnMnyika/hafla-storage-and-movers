@@ -1,75 +1,132 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f9fafb;
+}
+
 .main {
-    padding: 60px 20px;
+    flex: 1;
+    padding: 80px 20px;
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .main h1 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #0070f3;
+    font-size: 2.75rem;
+    margin-bottom: 50px;
+    color: #1a365d;
     text-align: center;
+    font-weight: 700;
+    letter-spacing: -0.025em;
 }
 
 .servicesGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    justify-items: center; /* Center items in the grid */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
 }
 
 .serviceCard {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 100%; /* Full width for smaller devices */
-    max-width: 300px; /* Limit width for larger screens */
+    width: 100%;
+    max-width: 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.serviceCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .serviceIcon {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #0070f3;
+}
+
+.serviceCard h2 {
+    font-size: 1.5rem;
     margin-bottom: 15px;
+    color: #1a365d;
+    font-weight: 600;
+}
+
+.serviceCard p {
+    font-size: 1rem;
+    color: #4a5568;
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
 .serviceButton {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 24px;
     background-color: #0070f3;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
     text-decoration: none;
 }
 
 .serviceButton:hover {
     background-color: #005bb5;
+    transform: scale(1.05);
+}
+
+.serviceButton:active {
+    transform: scale(0.95);
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    .main {
+        padding: 60px 15px;
+    }
+
     .main h1 {
-        font-size: 2rem;
+        font-size: 2.25rem;
     }
 
     .servicesGrid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust for smaller screens */
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
     }
 
     .serviceCard {
-        width: 90%; /* Slightly smaller width for better readability */
+        padding: 20px;
     }
 
     .serviceIcon {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .serviceButton {
         font-size: 0.9rem;
-        padding: 8px 16px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main h1 {
+        font-size: 2rem;
+    }
+
+    .serviceCard h2 {
+        font-size: 1.25rem;
+    }
+
+    .serviceCard p {
+        font-size: 0.9rem;
     }
 }

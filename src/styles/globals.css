@@ -4,6 +4,7 @@
     --background-color: #f9f9f9;
     --text-color: #333;
     --text-light: #555;
+    --gradient-background: linear-gradient(-45deg, #6a11cb, #2575fc, #6a11cb, #2575fc);
 }
 
 * {
@@ -16,8 +17,16 @@ html,
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background: var(--gradient-background); /* Updated to use gradient */
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    color: #fff; /* Updated text color for better contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    height: 100%; /* Ensure full height */
 }
 
 a {
@@ -61,6 +70,13 @@ img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+}
+
+/* Animations */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Responsive Typography */

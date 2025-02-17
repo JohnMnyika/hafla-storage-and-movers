@@ -7,7 +7,7 @@ import styles from '../styles/About.module.css';
 
 export default function About() {
     return (
-        <div>
+        <div className={styles.container}>
             <Head>
                 <title>About Us - Hafla Storage & Movers | Student Storage & Moving Services</title>
                 <meta name="description" content="Learn more about Hafla Storage & Movers, a trusted provider of student-focused storage and moving services. Affordable, secure, and reliable solutions." />
@@ -18,7 +18,9 @@ export default function About() {
                 <meta property="og:url" content="http://hafla-storage-and-movers.co.ke/" />
                 <link rel="canonical" href="http://hafla-storage-and-movers.co.ke/" />
             </Head>
+
             <Header />
+
             <motion.main
                 className={styles.main}
                 initial={{ opacity: 0 }}
@@ -54,16 +56,27 @@ export default function About() {
                             We are a renowned moving and storage company recognized for excellence in the industry. Our commitment to quality service has earned us prestigious awards such as the KESA Awards. We take great pride in providing safe, reliable, and professional moving and storage services that give our customers peace of mind.
                         </motion.p>
                     </motion.div>
+
                     <motion.div
                         className={styles.aboutImage}
                         initial={{ scale: 0.8, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{ delay: 0.5, duration: 0.8 }}
                     >
-                        <Image src="/items.jpeg" alt="About Hafla Storage & Movers" width={500} height={300} className={styles.image} />
+                        <Image
+                            src="/items.jpeg"
+                            alt="About Hafla Storage & Movers"
+                            width={500}
+                            height={300}
+                            className={styles.image}
+                            priority={false} // Lazy load the image
+                            placeholder="blur" // Add blur placeholder for better UX
+                            blurDataURL="/items.jpeg" // Add a low-res version of the image
+                        />
                     </motion.div>
                 </motion.div>
             </motion.main>
+
             <Footer />
         </div>
     );

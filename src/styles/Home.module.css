@@ -35,6 +35,11 @@
     position: relative;
     z-index: 1;
     animation: slideUp 1.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 @keyframes slideUp {
@@ -49,17 +54,46 @@
 }
 
 .heroContent h1 {
-    font-size: 3rem;
+    font-size: 3.5rem; /* Increased size for emphasis */
     margin-bottom: 20px;
-    font-weight: 700;
+    font-weight: 700; /* Bold for impact */
+    font-family: 'Georgia', serif; /* A classic serif font for trust */
+    letter-spacing: 1px; /* Slight spacing for readability */
+    line-height: 1.2; /* Tighter line height for compactness */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
 
 .heroContent p {
-    font-size: 1.2rem;
+    font-size: 1.4rem; /* Slightly larger for readability */
     margin-bottom: 40px;
     max-width: 600px;
     line-height: 1.6;
-    color: #fff; /* Ensure the paragraph text is white */
+    color: #fff;
+    font-family: 'Arial', sans-serif; /* Clean sans-serif for contrast */
+    font-weight: 300; /* Light weight for a modern feel */
+    letter-spacing: 0.5px; /* Slight spacing for elegance */
+}
+
+.ctaButton {
+    display: inline-block;
+    padding: 15px 30px; /* Slightly larger padding for prominence */
+    background-color: #0070f3;
+    color: #fff;
+    font-size: 1.2rem; /* Larger font size for the button */
+    font-weight: 600;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Arial', sans-serif; /* Consistent font with the paragraph */
+    text-transform: uppercase; /* Uppercase for a bold look */
+    letter-spacing: 1px; /* Spacing for a modern touch */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.ctaButton:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
 .ctaSection {
@@ -80,34 +114,17 @@
     color: #555;
 }
 
-.ctaButton {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #0070f3;
-    color: #fff;
-    font-size: 1.1rem;
-    font-weight: 600;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.ctaButton:hover {
-    background-color: #005bb5;
-    transform: scale(1.05);
-}
-
 @media (max-width: 768px) {
     .hero {
         height: 60vh;
     }
 
     .heroContent h1 {
-        font-size: 2rem;
+        font-size: 2.5rem; /* Adjusted for smaller screens */
     }
 
     .heroContent p {
-        font-size: 1rem;
+        font-size: 1.2rem; /* Adjusted for smaller screens */
     }
 
     .ctaSection h2 {
@@ -127,6 +144,7 @@
 
 .whyChooseUs h2 {
     font-size: 2rem;
+    font-weight: 100; /* Thin font weight */
     margin-bottom: 40px;
     color: #0070f3;
     animation: fadeIn 2s ease-in-out;
@@ -156,13 +174,14 @@
 }
 
 .reasonCard h3 {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Sub-heading size */
     margin-bottom: 15px;
     color: #0070f3;
+    font-weight: 100; /* Thin font weight */
 }
 
 .reasonCard p {
-    font-size: 1rem;
+    font-size: 1.2rem; /* Paragraph size */
     color: #555;
 }
 
@@ -177,6 +196,6 @@
     }
 
     .reasonCard p {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 }

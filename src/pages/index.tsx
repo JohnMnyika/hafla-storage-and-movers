@@ -21,8 +21,8 @@ export default function Home() {
     return (
         <div style={{ backgroundColor, width: '100vw', height: '100vh', transition: 'background-color 0.5s ease' }}>
             <Head>
-                <title>Color Changing Page</title>
-                <meta name="description" content="This page changes colors every second." />
+                <title>Website on hold.</title>
+                <meta name="description" content="On hold." />
             </Head>
             {/* This is a color-changing page */}
         </div>

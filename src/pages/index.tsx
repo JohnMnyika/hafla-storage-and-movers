@@ -1,75 +1,41 @@
 import Head from 'next/head';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import Link from 'next/link';
-import styles from '../styles/Home.module.css';
+import { useState, useEffect } from 'react';
 
 export default function Home() {
+    const [backgroundColor, setBackgroundColor] = useState('blue');
+
+    useEffect(() => {
+        const colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange'];
+        let currentIndex = 0;
+
+        const interval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % colors.length;
+            setBackgroundColor(colors[currentIndex]);
+        }, 1000); // Change color every 1000ms (1 second)
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
-        <div>
+        <div style={{
+            backgroundColor,
+            width: '100vw',
+            height: '100vh',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            transition: 'background-color 0.5s ease',
+            color: 'white',
+            fontSize: '2rem',
+            fontWeight: 'bold',
+            textAlign: 'center',
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
+        }}>
             <Head>
-                <title>Hafla Storage & Movers - Student Storage & Moving Services</title>
-                <meta name="description" content="Affordable, secure, and hassle-free student storage and moving services. Trusted by students for reliable solutions tailored to their needs." />
-                <meta name="keywords" content="student storage, moving services, affordable storage, secure storage, student movers" />
-                <meta name="author" content="Hafla Storage & Movers" />
-                <meta property="og:title" content="Hafla Storage & Movers - Student Storage & Moving Services" />
-                <meta property="og:description" content="Affordable, secure, and hassle-free student storage and moving services. Trusted by students for reliable solutions tailored to their needs." />
-                <meta property="og:image" content="http://hafla-storage-and-movers.co.ke/_next/image?url=%2Flogo.jpeg&w=64&q=75" />
-                <meta property="og:url" content="http://hafla-storage-and-movers.co.ke/" />
-                <link rel="canonical" href="http://hafla-storage-and-movers.co.ke/" />
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "Company",
-                        "name": "Hafla Storage & Movers",
-                        "url": "http://hafla-storage-and-movers.co.ke/",
-                        "logo": "http://hafla-storage-and-movers.co.ke/_next/image?url=%2Flogo.jpeg&w=64&q=75",
-                        "description": "Affordable, secure, and hassle-free student storage and moving services.",
-                        "contactPoint": {
-                            "@type": "ContactPoint",
-                            "telephone": "+123-456-7890",
-                            "contactType": "customer service"
-                        }
-                    })}
-                </script>
+                <title>Website on hold until further notice, please come back later!</title>
+                <meta name="description" content="This page changes colors every second." />
             </Head>
-            <Header />
-            <div className={styles.hero}>
-                <div className={styles.heroContent}>
-                    <h1>Your Trusted Partner for Student Storage & Moving</h1>
-                    <p style={{ color: '#fff' }}>Affordable, secure, and hassle-free solutions tailored for students.</p>
-                    <Link href="/services" className={styles.ctaButton}>View Our Services</Link>
-                </div>
-            </div>
-
-            {/* Why Choose Us Section */}
-            <section className={styles.whyChooseUs}>
-                <h2>Why Choose Us?</h2>
-                <div className={styles.reasonsGrid}>
-                    <div className={styles.reasonCard}>
-                        <h3>Student-Focused Services</h3>
-                        <p>Designed to accommodate student schedules and budgets.</p>
-                    </div>
-                    <div className={styles.reasonCard}>
-                        <h3>Award-Winning Company</h3>
-                        <p>Recognized for outstanding moving and storage services.</p>
-                    </div>
-                    <div className={styles.reasonCard}>
-                        <h3>Trusted & Secure</h3>
-                        <p>We prioritize safety and security, ensuring your belongings are handled with care.</p>
-                    </div>
-                    <div className={styles.reasonCard}>
-                        <h3>Experienced Team</h3>
-                        <p>Skilled movers with a track record of excellence.</p>
-                    </div>
-                    <div className={styles.reasonCard}>
-                        <h3>Affordable & Flexible</h3>
-                        <p>Transparent pricing and customizable services to fit your needs.</p>
-                    </div>
-                </div>
-            </section>
-
-            <Footer />
+            Trust us at your own risk!
         </div>
     );
 }

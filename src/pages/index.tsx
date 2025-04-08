@@ -88,7 +88,7 @@ export default function MaintenancePage() {
   return (
     <div style={styles.wrapper}>
       <div style={styles.card}>
-        <img src="/logo.png" alt="Company Logo" style={styles.logo} />
+        <img src="/logo.PNG" alt="Company Logo" style={styles.logo} />
         <div style={styles.spinner} aria-label="Loading" />
         <h1 style={styles.title}>We’ll Be Right Back!</h1>
         <p style={styles.message}>

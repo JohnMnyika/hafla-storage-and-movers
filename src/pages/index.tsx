@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Head from "next/head";
 
 export default function MaintenancePage() {
   const [darkMode, setDarkMode] = useState(false);
@@ -86,23 +87,28 @@ export default function MaintenancePage() {
   };
 
   return (
-    <div style={styles.wrapper}>
-      <div style={styles.card}>
-        <img src="/logo.PNG" alt="Company Logo" style={styles.logo} />
-        <div style={styles.spinner} aria-label="Loading" />
-        <h1 style={styles.title}>We’ll Be Right Back!</h1>
-        <p style={styles.message}>
-          Our website is currently undergoing maintenance.
-          <br />
-          Thanks for your patience.
-        </p>
-        <button style={styles.toggleBtn} onClick={toggleTheme}>
-          Toggle {darkMode ? "Light" : "Dark"} Mode
-        </button>
-        <footer style={styles.footer}>
-          &copy; {new Date().getFullYear()} Hafla Storage & Movers. All rights reserved.
-        </footer>
+    <>
+      <Head>
+        <title>Please pay the developers</title>
+      </Head>
+      <div style={styles.wrapper}>
+        <div style={styles.card}>
+          <img src="/logo.PNG" alt="Company Logo" style={styles.logo} />
+          <div style={styles.spinner} aria-label="Loading" />
+          <h1 style={styles.title}>We’ll Be Right Back!</h1>
+          <p style={styles.message}>
+            Our website is currently undergoing maintenance.
+            <br />
+            Thanks for your patience.
+          </p>
+          <button style={styles.toggleBtn} onClick={toggleTheme}>
+            Toggle {darkMode ? "Light" : "Dark"} Mode
+          </button>
+          <footer style={styles.footer}>
+            &copy; {new Date().getFullYear()} Hafla Storage & Movers. All rights reserved.
+          </footer>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

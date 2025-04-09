@@ -97,9 +97,8 @@ export default function MaintenancePage() {
           <div style={styles.spinner} aria-label="Loading" />
           <h1 style={styles.title}>We’ll Be Right Back!</h1>
           <p style={styles.message}>
-            Our website is currently undergoing maintenance.
             <br />
-            Thanks for your patience.
+            Trust us at your own risk!.
           </p>
           <button style={styles.toggleBtn} onClick={toggleTheme}>
             Toggle {darkMode ? "Light" : "Dark"} Mode

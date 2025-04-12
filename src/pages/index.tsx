@@ -108,7 +108,7 @@ export default function MaintenancePage() {
             style={styles.logo}
           />
           <div style={styles.spinner} aria-label="Loading" />
-          <h1 style={styles.title}>We&apos;ll Be Right Back!</h1>
+          <h1 style={styles.title}>We dont keep our word!</h1>
           <p style={styles.message}>
             <br />
             Trust us at your own risk!

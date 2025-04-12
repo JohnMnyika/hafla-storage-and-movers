@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import Head from "next/head";
+import Image from "next/image";
 
 export default function MaintenancePage() {
   const [colorIndex, setColorIndex] = useState(0);
@@ -13,14 +14,16 @@ export default function MaintenancePage() {
     "#FFD733", // Yellow
   ];
 
+  // Memoized color change function
+  const changeColor = useCallback(() => {
+    setColorIndex((prevIndex) => (prevIndex + 1) % colors.length);
+  }, [colors.length]);
+
   // Change color every second
   useEffect(() => {
-    const interval = setInterval(() => {
-      setColorIndex((prevIndex) => (prevIndex + 1) % colors.length);
-    }, 1000);
-
+    const interval = setInterval(changeColor, 1000);
     return () => clearInterval(interval);
-  }, []);
+  }, [changeColor]);
 
   // Add spinner animation to DOM only on the client
   useEffect(() => {
@@ -97,15 +100,21 @@ export default function MaintenancePage() {
       </Head>
       <div style={styles.wrapper}>
         <div style={styles.card}>
-          <img src="/logo.PNG" alt="Company Logo" style={styles.logo} />
+          <Image 
+            src="/logo.PNG" 
+            alt="Company Logo" 
+            width={80}
+            height={80}
+            style={styles.logo}
+          />
           <div style={styles.spinner} aria-label="Loading" />
-          <h1 style={styles.title}>We don't keep our word!</h1>
+          <h1 style={styles.title}>We&apos;ll Be Right Back!</h1>
           <p style={styles.message}>
             <br />
-            Trust us at your own risk!.
+            Trust us at your own risk!
           </p>
           <footer style={styles.footer}>
-            &copy; {new Date().getFullYear()} Hafla Storage & Movers. All rights reserved.
+            &copy; {new Date().getFullYear()} Hafla Storage &amp; Movers. All rights reserved.
           </footer>
         </div>
       </div>

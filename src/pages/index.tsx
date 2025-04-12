@@ -2,7 +2,25 @@ import { useEffect, useState } from "react";
 import Head from "next/head";
 
 export default function MaintenancePage() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [colorIndex, setColorIndex] = useState(0);
+  const colors = [
+    "#FF5733", // Red-Orange
+    "#33FF57", // Green
+    "#3357FF", // Blue
+    "#F033FF", // Purple
+    "#FF33F0", // Pink
+    "#33FFF5", // Cyan
+    "#FFD733", // Yellow
+  ];
+
+  // Change color every second
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setColorIndex((prevIndex) => (prevIndex + 1) % colors.length);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   // Add spinner animation to DOM only on the client
   useEffect(() => {
@@ -19,8 +37,6 @@ export default function MaintenancePage() {
     };
   }, []);
 
-  const toggleTheme = () => setDarkMode((prev) => !prev);
-
   const styles: { [key: string]: React.CSSProperties } = {
     wrapper: {
       display: "flex",
@@ -29,20 +45,18 @@ export default function MaintenancePage() {
       height: "100vh",
       padding: "1rem",
       fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-      backgroundColor: darkMode ? "#121212" : "#f0f2f5",
-      transition: "background-color 0.3s ease",
+      backgroundColor: colors[colorIndex],
+      transition: "background-color 0.5s ease",
     },
     card: {
-      backgroundColor: darkMode ? "#1e1e1e" : "#ffffff",
+      backgroundColor: "#ffffff",
       borderRadius: "20px",
       padding: "2.5rem",
-      boxShadow: darkMode
-        ? "0 8px 24px rgba(255,255,255,0.05)"
-        : "0 8px 24px rgba(0,0,0,0.1)",
+      boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
       textAlign: "center",
       maxWidth: "480px",
       width: "100%",
-      color: darkMode ? "#e0e0e0" : "#333",
+      color: "#333",
     },
     logo: {
       width: "80px",
@@ -55,7 +69,7 @@ export default function MaintenancePage() {
       width: "48px",
       height: "48px",
       border: "6px solid #ccc",
-      borderTop: `6px solid ${darkMode ? "#90caf9" : "#007bff"}`,
+      borderTop: `6px solid ${colors[colorIndex]}`,
       borderRadius: "50%",
       animation: "spin 1s linear infinite",
     },
@@ -67,22 +81,12 @@ export default function MaintenancePage() {
     message: {
       fontSize: "1.05rem",
       marginBottom: "1.5rem",
-      color: darkMode ? "#aaa" : "#555",
+      color: "#555",
     },
     footer: {
       fontSize: "0.85rem",
-      color: darkMode ? "#777" : "#aaa",
+      color: "#aaa",
       marginTop: "2rem",
-    },
-    toggleBtn: {
-      marginTop: "1.5rem",
-      padding: "0.5rem 1rem",
-      borderRadius: "8px",
-      border: "none",
-      backgroundColor: darkMode ? "#333" : "#007bff",
-      color: "#fff",
-      cursor: "pointer",
-      fontWeight: 500,
     },
   };
 
@@ -95,14 +99,11 @@ export default function MaintenancePage() {
         <div style={styles.card}>
           <img src="/logo.PNG" alt="Company Logo" style={styles.logo} />
           <div style={styles.spinner} aria-label="Loading" />
-          <h1 style={styles.title}>We’ll Be Right Back!</h1>
+          <h1 style={styles.title}>We don't keep our word!</h1>
           <p style={styles.message}>
             <br />
             Trust us at your own risk!.
           </p>
-          <button style={styles.toggleBtn} onClick={toggleTheme}>
-            Toggle {darkMode ? "Light" : "Dark"} Mode
-          </button>
           <footer style={styles.footer}>
             &copy; {new Date().getFullYear()} Hafla Storage & Movers. All rights reserved.
           </footer>

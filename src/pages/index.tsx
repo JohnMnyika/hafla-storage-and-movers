@@ -1,123 +1,75 @@
-import { useEffect, useState, useCallback } from "react";
-import Head from "next/head";
-import Image from "next/image";
+import Head from 'next/head';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Link from 'next/link';
+import styles from '../styles/Home.module.css';
 
-export default function MaintenancePage() {
-  const [colorIndex, setColorIndex] = useState(0);
-  const colors = [
-    "#FF5733", // Red-Orange
-    "#33FF57", // Green
-    "#3357FF", // Blue
-    "#F033FF", // Purple
-    "#FF33F0", // Pink
-    "#33FFF5", // Cyan
-    "#FFD733", // Yellow
-  ];
+export default function Home() {
+    return (
+        <div>
+            <Head>
+                <title>Hafla Storage & Movers - Student Storage & Moving Services</title>
+                <meta name="description" content="Affordable, secure, and hassle-free student storage and moving services. Trusted by students for reliable solutions tailored to their needs." />
+                <meta name="keywords" content="student storage, moving services, affordable storage, secure storage, student movers" />
+                <meta name="author" content="Hafla Storage & Movers" />
+                <meta property="og:title" content="Hafla Storage & Movers - Student Storage & Moving Services" />
+                <meta property="og:description" content="Affordable, secure, and hassle-free student storage and moving services. Trusted by students for reliable solutions tailored to their needs." />
+                <meta property="og:image" content="http://hafla-storage-and-movers.co.ke/_next/image?url=%2Flogo.jpeg&w=64&q=75" />
+                <meta property="og:url" content="http://hafla-storage-and-movers.co.ke/" />
+                <link rel="canonical" href="http://hafla-storage-and-movers.co.ke/" />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Company",
+                        "name": "Hafla Storage & Movers",
+                        "url": "http://hafla-storage-and-movers.co.ke/",
+                        "logo": "http://hafla-storage-and-movers.co.ke/_next/image?url=%2Flogo.jpeg&w=64&q=75",
+                        "description": "Affordable, secure, and hassle-free student storage and moving services.",
+                        "contactPoint": {
+                            "@type": "ContactPoint",
+                            "telephone": "+123-456-7890",
+                            "contactType": "customer service"
+                        }
+                    })}
+                </script>
+            </Head>
+            <Header />
+            <div className={styles.hero}>
+                <div className={styles.heroContent}>
+                    <h1>Your Trusted Partner for Student Storage & Moving</h1>
+                    <p style={{ color: '#fff' }}>Affordable, secure, and hassle-free solutions tailored for students.</p>
+                    <Link href="/services" className={styles.ctaButton}>View Our Services</Link>
+                </div>
+            </div>
 
-  // Memoized color change function
-  const changeColor = useCallback(() => {
-    setColorIndex((prevIndex) => (prevIndex + 1) % colors.length);
-  }, [colors.length]);
+            {/* Why Choose Us Section */}
+            <section className={styles.whyChooseUs}>
+                <h2>Why Choose Us?</h2>
+                <div className={styles.reasonsGrid}>
+                    <div className={styles.reasonCard}>
+                        <h3>Student-Focused Services</h3>
+                        <p>Designed to accommodate student schedules and budgets.</p>
+                    </div>
+                    <div className={styles.reasonCard}>
+                        <h3>Award-Winning Company</h3>
+                        <p>Recognized for outstanding moving and storage services.</p>
+                    </div>
+                    <div className={styles.reasonCard}>
+                        <h3>Trusted & Secure</h3>
+                        <p>We prioritize safety and security, ensuring your belongings are handled with care.</p>
+                    </div>
+                    <div className={styles.reasonCard}>
+                        <h3>Experienced Team</h3>
+                        <p>Skilled movers with a track record of excellence.</p>
+                    </div>
+                    <div className={styles.reasonCard}>
+                        <h3>Affordable & Flexible</h3>
+                        <p>Transparent pricing and customizable services to fit your needs.</p>
+                    </div>
+                </div>
+            </section>
 
-  // Change color every second
-  useEffect(() => {
-    const interval = setInterval(changeColor, 1000);
-    return () => clearInterval(interval);
-  }, [changeColor]);
-
-  // Add spinner animation to DOM only on the client
-  useEffect(() => {
-    const style = document.createElement("style");
-    style.innerHTML = `
-      @keyframes spin {
-        to { transform: rotate(360deg); }
-      }
-    `;
-    document.head.appendChild(style);
-
-    return () => {
-      document.head.removeChild(style);
-    };
-  }, []);
-
-  const styles: { [key: string]: React.CSSProperties } = {
-    wrapper: {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      height: "100vh",
-      padding: "1rem",
-      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-      backgroundColor: colors[colorIndex],
-      transition: "background-color 0.5s ease",
-    },
-    card: {
-      backgroundColor: "#ffffff",
-      borderRadius: "20px",
-      padding: "2.5rem",
-      boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
-      textAlign: "center",
-      maxWidth: "480px",
-      width: "100%",
-      color: "#333",
-    },
-    logo: {
-      width: "80px",
-      height: "80px",
-      marginBottom: "1.5rem",
-      objectFit: "contain",
-    },
-    spinner: {
-      margin: "1rem auto",
-      width: "48px",
-      height: "48px",
-      border: "6px solid #ccc",
-      borderTop: `6px solid ${colors[colorIndex]}`,
-      borderRadius: "50%",
-      animation: "spin 1s linear infinite",
-    },
-    title: {
-      fontSize: "1.8rem",
-      fontWeight: 600,
-      marginBottom: "0.75rem",
-    },
-    message: {
-      fontSize: "1.05rem",
-      marginBottom: "1.5rem",
-      color: "#555",
-    },
-    footer: {
-      fontSize: "0.85rem",
-      color: "#aaa",
-      marginTop: "2rem",
-    },
-  };
-
-  return (
-    <>
-      <Head>
-        <title>Please pay the developers</title>
-      </Head>
-      <div style={styles.wrapper}>
-        <div style={styles.card}>
-          <Image 
-            src="/logo.PNG" 
-            alt="Company Logo" 
-            width={80}
-            height={80}
-            style={styles.logo}
-          />
-          <div style={styles.spinner} aria-label="Loading" />
-          <h1 style={styles.title}>We do not keep our word!</h1>
-          <p style={styles.message}>
-            <br />
-            Trust us at your own risk!
-          </p>
-          <footer style={styles.footer}>
-            &copy; {new Date().getFullYear()} Hafla Storage &amp; Movers. All rights reserved.
-          </footer>
+            <Footer />
         </div>
-      </div>
-    </>
-  );
+    );
 }

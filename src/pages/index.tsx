@@ -17,22 +17,6 @@ export default function Home() {
                 <meta property="og:image" content="http://hafla-storage-and-movers.co.ke/_next/image?url=%2Flogo.jpeg&w=64&q=75" />
                 <meta property="og:url" content="http://hafla-storage-and-movers.co.ke/" />
                 <link rel="canonical" href="http://hafla-storage-and-movers.co.ke/" />
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "Company",
-                        "name": "Hafla Storage & Movers",
-                        "url": "http://hafla-storage-and-movers.co.ke/",
-                        "logo": "http://hafla-storage-and-movers.co.ke/_next/image?url=%2Flogo.jpeg&w=64&q=75",
-                        "description": "Affordable, secure, and hassle-free student storage and moving services.",
-                        "contactPoint": {
-                            "@type": "ContactPoint",
-                            "telephone": " +254 110947219",
-                            "Email": "haflacustomersales@gmail.com",
-                            "contactType": "customer service"
-                        }
-                    })}
-                </script>
             </Head>
             <Header />
             <div className={styles.hero}>

@@ -27,7 +27,8 @@ export default function Home() {
                         "description": "Affordable, secure, and hassle-free student storage and moving services.",
                         "contactPoint": {
                             "@type": "ContactPoint",
-                            "telephone": "+123-456-7890",
+                            "telephone": " +254 110947219",
+                            "Email": "haflacustomersales@gmail.com",
                             "contactType": "customer service"
                         }
                     })}
